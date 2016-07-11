@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+
+body { 
+    font-family: sans-serif;
+    font-weight: bold;  
+    font-size: 1em;
+}
+
+.subway li {
+    list-style: none;
+    position: relative;
+}
+
+.subway li:after {
+    content: "\25A0\00A0";
+    position: absolute;
+    left: -0.6em;
+    bottom: 0;
+}
+
+.subway li:before {
+    content:"";
+    position: absolute;
+    left: -0.75em;
+    border-left: 0.3em solid;
+    height: 100%;
+}
+
+.subway li:first-child:before {
+    top: 0.3em;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+    .subway li:first-child:before {
+        top: 0.45em;
+    }
+}  
+
+.subway li:last-child:before {
+   bottom: 0.4em;
+}
+
+</style>
+
+<link rel="stylesheet" href="subway-colors.css">
+
+</head>
+<body>
+
+<div class="subway">
+  <ul class="red">
+    <li>North End</li>
+    <li>Downtown</li>
+    <li>South End</li>
+  </ul>
+</div>
+
+</body>
+</html>

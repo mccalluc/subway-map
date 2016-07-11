@@ -1,0 +1,7 @@
+.subway .red li:after {
+  color: #F00;
+}
+
+.subway .red li:before {
+  border-color: #F00;
+}

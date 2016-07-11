@@ -8,16 +8,14 @@ body {
     font-size: 1em;
 }
 
+td {
+    width: 8em;
+    height: 8em;
+}
+
 .subway li {
     list-style: none;
     position: relative;
-}
-
-.subway li:after {
-    content: "\25A0\00A0";
-    position: absolute;
-    left: -0.6em;
-    bottom: 0;
 }
 
 .subway li:before {
@@ -26,6 +24,13 @@ body {
     left: -0.75em;
     border-left: 0.3em solid;
     height: 100%;
+}
+
+.subway li:after {
+    content: "\25A0\00A0";
+    position: absolute;
+    left: -0.6em;
+    bottom: 0;
 }
 
 .subway li:first-child:before {
@@ -38,7 +43,44 @@ body {
 }  
 
 .subway li:last-child:before {
-   bottom: 0.4em;
+    bottom: 0.4em;
+}
+
+.subway .e-w {
+    transform: rotate(-90deg);
+}
+
+.subway .w-e {
+    transform: rotate(90deg);
+}
+
+.subway .nw-se {
+    transform: rotate(45deg);
+}
+
+.subway .ne-sw {
+    transform: rotate(-45deg);
+}
+
+.subway .up li {
+    transform: rotate(-45deg);
+}
+.subway .up li:before {
+    transform: rotate(45deg);
+    transform-origin: left;
+    top: 0px !important;
+}
+
+.subway .down li {
+    transform: rotate(45deg);
+}
+.subway .down li:before {
+    transform: rotate(-45deg);
+    top: 0px !important;
+}
+
+.subway .up li, .subway .down li {
+    height: 1.5em;
 }
 
 </style>
@@ -48,13 +90,122 @@ body {
 </head>
 <body>
 
-<div class="subway">
-  <ul class="red">
-    <li>North End</li>
-    <li>Downtown</li>
-    <li>South End</li>
-  </ul>
-</div>
-
+<table>
+  <tr>
+    <td>    
+        <div class="subway">
+          <ul class="red w-e up">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red w-e">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway" style="display: none;">
+          <ul class="red w-e down">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>    
+        <div class="subway">
+          <ul class="red nw-se up">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red nw-se">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red nw-se down">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>    
+        <div class="subway">
+          <ul class="red n-s up">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red n-s">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red n-s down">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>    
+        <div class="subway">
+          <ul class="red ne-sw up">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red ne-sw">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red ne-sw down">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td>    
+        <div class="subway" style="display: none;">
+          <ul class="red e-w up">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red e-w">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+    <td>    
+        <div class="subway">
+          <ul class="red e-w down">
+            <li>North End</li><li>Downtown</li><li>South End</li>
+          </ul>
+        </div>
+    </td>
+  </tr>
+</table>
 </body>
 </html>

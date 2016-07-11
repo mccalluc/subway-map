@@ -46,6 +46,8 @@ td {
     bottom: 0.4em;
 }
 
+/**********************/
+
 .subway .e-w {
     transform: rotate(-90deg);
 }
@@ -62,22 +64,52 @@ td {
     transform: rotate(-45deg);
 }
 
+/**********************/
+
 .subway .up li {
     transform: rotate(-45deg);
+    transform-origin: left;
 }
 .subway .up li:before {
     transform: rotate(45deg);
-    transform-origin: left;
-    top: 0px !important;
+    top: -0.75em !important;
+    left: -0.75em !important;
 }
+.subway .up li:after {
+    transform: rotate(45deg);
+    top: -0.5em !important;
+    left: -1em !important;
+}
+.subway .up li:first-child:before {
+    top: -0.50em !important;
+    left: -1em !important;
+}
+@media (-webkit-min-device-pixel-ratio:0) {
+    .subway .up li:first-child:before {
+        top: 0.45em;
+    }
+}  
+
+.subway .up li:last-child:before {
+    bottom: 0.4em;
+}
+
+/**********************/
 
 .subway .down li {
     transform: rotate(45deg);
+    transform-origin: left;
 }
 .subway .down li:before {
     transform: rotate(-45deg);
     top: 0px !important;
 }
+.subway .down li:after {
+    transform: rotate(-45deg);
+    top: 0px !important;
+}
+
+/**********************/
 
 .subway .up li, .subway .down li {
     height: 1.5em;
